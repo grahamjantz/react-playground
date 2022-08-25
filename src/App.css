@@ -22,7 +22,7 @@
 
 .component {
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
     height: 50%;
     background-color: darkolivegreen;
     border-radius: 50px;
@@ -57,7 +57,7 @@
 .input {
   background-color: greenyellow;
   height: 2.2em;
-  width: 50%;
+  width: 70%;
   font-family: 'Courier New', Courier, monospace;
   border: none;
   border-radius: 20px;
@@ -71,7 +71,7 @@ form {
 .textarea {
   background-color: greenyellow;
   height: 4em;
-  width: 50%;
+  width: 70%;
   font-family: 'Courier New', Courier, monospace;
   border: none;
   border-radius: 20px;
@@ -79,7 +79,7 @@ form {
 }
 
 .note {
-  width: 50%;
+  width: 70%;
   height: 8em;
   margin: 10px;
   background-color: green;

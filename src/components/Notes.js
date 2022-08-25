@@ -3,20 +3,34 @@ import Header from './Header'
 import Button from './Button';
 import Note from './Note'
 
+  
+
 const Notes = () => {
-  const [input, setInput] = useState('');
-  const [note, setNote] = useState('');
+  const [text, setText] = useState('');
+  const [note, setNote] = useState([
+    // {
+    //   id: 1,
+    //   text: 'Note 1'
+    // },
+    // {
+    //   id: 2,
+    //   text: 'Note 2'
+    // }
+  ]);
+  const [map, setMap] = useState();
   
   const handleChange = (e) => {
-    setInput(e.target.value)
+    setText(e.target.value)
   }
 
+  const numbers = [1,2,3,4,5];
   const handleSubmit = (e) => {
     e.preventDefault();
-    setNote(input)
-    setInput()
-  }
 
+    setMap(note.map((item) => [...note, item]))
+
+  }
+  
   return (
     <div className='component'>
         <Header title="Notes"/>
@@ -28,7 +42,8 @@ const Notes = () => {
             </textarea>
             <Button text="Add Note" type='submit'/>
         </form>
-        <Note text={note} {note.length === 0 ? style={{display: none}}}/>
+        <p>{map}</p>
+        <Note text={note}/>
     </div>
   )
 }
