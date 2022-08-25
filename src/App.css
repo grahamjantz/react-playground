@@ -54,6 +54,30 @@
   background-color: darkgreen;
 }
 
+.x-btn{
+  width: 2em;
+  height: 2em;
+  color: white;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.x-btn:hover {
+  cursor: pointer;
+  background-color: green;
+}
+
+.x-btn:active {
+  background-color: darkgreen;
+  color: red;
+}
+
+.fa {
+  width: 2em;
+  height: 2em;
+}
+
 .input {
   background-color: greenyellow;
   height: 2.2em;
@@ -84,4 +108,13 @@ form {
   margin: 10px;
   background-color: green;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.noteList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

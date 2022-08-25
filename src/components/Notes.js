@@ -1,34 +1,38 @@
 import { React, useState } from 'react'
 import Header from './Header'
 import Button from './Button';
-import Note from './Note'
+import NoteList from './NoteList';
 
   
 
 const Notes = () => {
   const [text, setText] = useState('');
   const [note, setNote] = useState([
-    // {
-    //   id: 1,
-    //   text: 'Note 1'
-    // },
-    // {
-    //   id: 2,
-    //   text: 'Note 2'
-    // }
+    {
+      id: 1,
+      text: 'Note 1'
+    },
+    {
+      id: 2,
+      text: 'Note 2'
+    }
   ]);
-  const [map, setMap] = useState();
-  
+
   const handleChange = (e) => {
     setText(e.target.value)
   }
 
-  const numbers = [1,2,3,4,5];
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const id = Math.floor(Math.random() * 10000)
+    setNote(text.length > 0 ? [...note, {text, id}] : [...note])
+    setText('')
+  }
 
-    setMap(note.map((item) => [...note, item]))
-
+  const deleteNote = (id) => {
+    setNote(note.filter((note) => note.id !== id))
   }
   
   return (
@@ -40,10 +44,9 @@ const Notes = () => {
               placeholder="enter note"
               onChange={handleChange}>
             </textarea>
-            <Button text="Add Note" type='submit'/>
+            <Button text="Add Note" type='submit' className="btn" />
+            <NoteList note={note} deleteNote={deleteNote}/>
         </form>
-        <p>{map}</p>
-        <Note text={note}/>
     </div>
   )
 }

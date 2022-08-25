@@ -23,7 +23,7 @@ const Greeting = () => {
             <Header title="Greeting" subheader="What is your name?" />
             <h1></h1>
             <InputText placeholder="Enter Name" handleChange={handleChange}/>
-            <Button text="Submit" handleClick={handleClick}/>
+            <Button text="Submit" handleClick={handleClick} className="btn" />
             <h1>{name.length > 0 ? `Hello ${name}!` : `Hello!`}</h1>
         </div>
     )

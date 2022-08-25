@@ -18,8 +18,8 @@ const Counter = ({ text, handleChange }) => {
     <div className="component">
         <Header title="Counter"/>
         <h1>Total Count: {count}!</h1>
-        <Button text="Increment" handleClick={increment}/>
-        <Button text="Decrement" handleClick={decrement}/>
+        <Button text="Increment" handleClick={increment} className="btn" />
+        <Button text="Decrement" handleClick={decrement} className="btn" />
     </div>
   )
 }
