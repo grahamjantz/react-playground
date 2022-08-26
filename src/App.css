@@ -5,9 +5,9 @@
 
 .App {
   text-align: center;
-  background-color: darkslategray;
+  background-color: #e0e0e0;
   height: auto;
-  color: white;
+  color: #3a4446;
   margin-top: 0;
   padding: 2em;
   display: flex;
@@ -17,60 +17,68 @@
 
 .header {
   font-size: 3em;
-  text-decoration: underline;
 }
 
 .component {
     margin: 0 auto;
     width: 90%;
     height: 50%;
-    background-color: darkolivegreen;
+    background-color: transparent;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     justify-content: center;
     align-items: center;
+    color: #3a4446;
+    border-radius: 50px;
+    box-shadow:  13px 13px 26px #bebebe,
+                -13px -13px 26px #ffffff;
 }
 
 .btn {
   width: 6em;
   height: 2.2em;
-  background-color: greenyellow;
-  color: black;
+  background-color: transparent;
+  color: #3a4446;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1em;
   border-radius: 100px;
   border: none;
   margin: 10px;
+  box-shadow: -3px -3px 7px #ffffffb2, 
+         3px 3px 5px rgba(94, 104, 121, 0.945);
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: green;
+  text-decoration: underline;
 }
 
 .btn:active {
-  background-color: darkgreen;
+  box-shadow: inset 3px 3px 5px rgba(94, 104, 121, 0.945),
+            -3px -3px 7px #ffffffb2;
 }
 
 .x-btn{
   width: 2em;
   height: 2em;
-  color: white;
+  color: #7e7e7e;
   border: none;
   background-color: transparent;
   border-radius: 50%;
+  box-shadow: -3px -3px 7px #ffffffb2, 
+         3px 3px 5px rgba(94, 104, 121, 0.945);
 }
 
 .x-btn:hover {
   cursor: pointer;
-  background-color: green;
 }
 
 .x-btn:active {
-  background-color: darkgreen;
   color: red;
+  box-shadow: inset 3px 3px 5px rgba(94, 104, 121, 0.945),
+            -3px -3px 7px #ffffffb2;
 }
 
 .fa {
@@ -79,13 +87,15 @@
 }
 
 .input {
-  background-color: greenyellow;
+  background-color: transparent;
   height: 2.2em;
   width: 70%;
   font-family: 'Courier New', Courier, monospace;
   border: none;
   border-radius: 20px;
-  padding: 5px;
+  padding: 15px;
+  box-shadow: inset 3px 3px 5px rgba(94, 104, 121, 0.945),
+            -3px -3px 7px #ffffffb2;
 }
 
 form {
@@ -93,28 +103,33 @@ form {
 }
 
 .textarea {
-  background-color: greenyellow;
+  background-color: transparent;
   height: 4em;
   width: 70%;
   font-family: 'Courier New', Courier, monospace;
   border: none;
   border-radius: 20px;
-  padding: 5px;
+  padding: 15px;
+  box-shadow: inset 3px 3px 5px rgba(94, 104, 121, 0.945),
+            -3px -3px 7px #ffffffb2;
 }
 
 .note {
   width: 70%;
   height: 8em;
   margin: 10px;
-  background-color: green;
+  background-color: transparent;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  box-shadow:  13px 13px 26px #bebebe,
+                -13px -13px 26px #ffffff;
 }
 
 .noteList {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2em;
 }

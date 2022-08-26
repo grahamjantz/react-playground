@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# React Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with the intention of practicing my React skills. I have several 'apps' in this app and I plan to continue to add more. 
 
-## Available Scripts
+## Universal Components
 
-In the project directory, you can run:
+Each app reuses the same components:
 
-### `npm start`
+    <Header />
+    and
+    <Button />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each component is set to receive props to determine what the header or button will display for text and the buttons also receive props to dictate the onClick function. I am quite proud of my design and use of the button component as it allowed me to continually reuse the same button with the same styling and props.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Counter App
 
-### `npm test`
+This is a simple counting machine, press increment or decrement to increase or decrease total value. The button components are each given corresponding functions to call on click which update the state of the counter by 1 either up or down.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Greeting App
 
-### `npm run build`
+This app presented a new challenge of taking a text input and rendering it to the dom. Once again this uses a button component with its unique onClick function.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I used two instances of useState(). The first one captures the onChange value of the text input, the second one is triggered by the onClick function of the submit button to set its state the value of the first state and display that to the dom. I'm not sure if using two state hooks like this is the most efficient way or follows React best practices but this is the solution I came up with! I may update this down the road to reflect new techniques I may pick up.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Notes App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app is the most complicated of the three so far. This involved using three different components. This app also utilizes the .map() and .filter() methods to render the notes to the screen. This was a good learning curve for me as I have not used these methods extensively in the past, rather I've gotten used to for loops and .push(). These methods are much simpler and cleaner.
 
-### `npm run eject`
+This app also uses to useState() hooks similar to the Greeting app, and again I'm not sure if this is efficient or follows best practices so I may update this functionality later as well. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Neumorphic Styling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project utilizes a new to me styling idiom; neumorphic design. After a quick google search I was able to find the techniques to make this styling. The use of box-shadow in the css is very clever and powerful.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Summary
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All in all this React Playground has really helped me get a grasp on React ideas such as: state, hooks, props, and components. I hope to continue building on this project as a way to practice my React skills!

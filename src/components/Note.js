@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import { FaRegTimesCircle } from 'react-icons/fa'
+import { IoCloseOutline } from 'react-icons/io5'
 
 const Note = ({ note, deleteNote }) => {
     
@@ -8,12 +8,14 @@ const Note = ({ note, deleteNote }) => {
         <div className='note'>
             <h1>{note.text}</h1>
             <Button 
-                text={<FaRegTimesCircle className='fa'/>} 
+                text={<IoCloseOutline className='fa'/>} 
                 className='x-btn'
-                handleClick={deleteNote}
+                handleClick={() => deleteNote(note.id)}
                 />
         </div>
     )
 }
+
+
 
 export default Note

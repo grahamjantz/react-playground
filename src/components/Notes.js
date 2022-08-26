@@ -41,7 +41,8 @@ const Notes = () => {
         <form onSubmit={handleSubmit}>
             <textarea 
               className="textarea" 
-              placeholder="enter note"
+              placeholder='Enter Note'
+              value={text}
               onChange={handleChange}>
             </textarea>
             <Button text="Add Note" type='submit' className="btn" />
